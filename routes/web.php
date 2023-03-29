@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::post('/create', [MenuController::class, 'store']);
 
 Route::get('/menus/create', [MenuController::class, 'create']);
+
+Route::get('/register', [UserController::class, 'create']);
