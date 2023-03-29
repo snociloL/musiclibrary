@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::post('/create', [MenuController::class, 'store']);
-
 Route::get('/menus/create', [MenuController::class, 'create']);
 
+Route::post('/create', [MenuController::class, 'store']);
+
 Route::get('/register', [UserController::class, 'create']);
+
+Route::post('/users', [UserController::class, 'store']);
