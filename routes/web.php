@@ -25,3 +25,9 @@ Route::post('/create', [MenuController::class, 'store']);
 Route::get('/register', [UserController::class, 'create']);
 
 Route::post('/users', [UserController::class, 'store']);
+
+Route::get('/login', [UserController::class, 'login'])->name('login');
+
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::post('/logout', [UserController::class, 'logout']);
